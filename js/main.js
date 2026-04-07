@@ -23,12 +23,27 @@ function initNavigation() {
     });
 
     // Close menu when a link is clicked
-    links.querySelectorAll("a").forEach((link) => {
+    const allNavClicks = links.querySelectorAll("a:not(.nav-dropdown-trigger)");
+    allNavClicks.forEach((link) => {
       link.addEventListener("click", () => {
         toggle.classList.remove("open");
         links.classList.remove("open");
       });
     });
+
+    // Mobile dropdown toggle
+    const dropdownTrigger = links.querySelector(".nav-dropdown-trigger");
+    if (dropdownTrigger) {
+      dropdownTrigger.addEventListener("click", (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const menu = dropdownTrigger.closest(".nav-dropdown").querySelector(".nav-dropdown-menu");
+          if (menu) {
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+          }
+        }
+      });
+    }
   }
 
   // Nav shadow on scroll
