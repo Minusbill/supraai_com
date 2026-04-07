@@ -337,11 +337,13 @@ section { padding: 4rem 2rem; max-width: var(--max-width); margin: 0 auto; }
 }
 .service-flow-step {
   background: var(--color-background-primary);
-  border: 1px solid var(--color-border-tertiary);
+  border: 1px solid var(--color-border-secondary);
   border-radius: var(--border-radius-lg);
   padding: 1.5rem;
   position: relative;
   transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  border-top: 3px solid var(--brand-primary);
 }
 .service-flow-step:hover {
   transform: translateY(-3px);
@@ -349,15 +351,15 @@ section { padding: 4rem 2rem; max-width: var(--max-width); margin: 0 auto; }
   border-color: var(--brand-primary);
 }
 .flow-num {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 800;
   color: var(--brand-primary);
-  opacity: 0.2;
+  opacity: 0.35;
   line-height: 1;
   margin-bottom: 10px;
 }
 .service-flow-step:hover .flow-num {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 .service-flow-step h3 {
   font-size: 16px;
