@@ -1,0 +1,440 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-sans);color:var(--color-text-primary);background:var(--color-background-tertiary);}
+a{text-decoration:none;color:inherit;}
+.nav{background:var(--color-background-primary);border-bottom:0.5px solid var(--color-border-tertiary);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:100;}
+.logo{font-size:18px;font-weight:500;color:var(--color-text-primary);}
+.logo span{color:#1D9E75;}
+.nav-links{display:flex;gap:1.5rem;}
+.nav-links a{font-size:14px;color:var(--color-text-secondary);cursor:pointer;}
+.nav-links a:hover{color:var(--color-text-primary);}
+.nav-cta{background:#1D9E75;color:#fff;border:none;padding:8px 18px;border-radius:var(--border-radius-md);font-size:13px;cursor:pointer;font-weight:500;}
+.hero{padding:5rem 2rem 4rem;max-width:860px;margin:0 auto;text-align:center;}
+.badge{display:inline-block;background:#E1F5EE;color:#0F6E56;font-size:12px;padding:4px 14px;border-radius:100px;margin-bottom:1.5rem;font-weight:500;}
+.hero h1{font-size:38px;font-weight:500;line-height:1.25;margin-bottom:1.25rem;color:var(--color-text-primary);}
+.hero h1 em{font-style:normal;color:#1D9E75;}
+.hero p{font-size:16px;color:var(--color-text-secondary);line-height:1.7;max-width:580px;margin:0 auto 2rem;}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{background:#1D9E75;color:#fff;border:none;padding:12px 28px;border-radius:var(--border-radius-md);font-size:15px;font-weight:500;cursor:pointer;}
+.btn-secondary{background:transparent;color:var(--color-text-primary);border:0.5px solid var(--color-border-secondary);padding:12px 28px;border-radius:var(--border-radius-md);font-size:15px;cursor:pointer;}
+.stats{display:flex;gap:2rem;justify-content:center;margin-top:3rem;flex-wrap:wrap;}
+.stat-item{text-align:center;}
+.stat-num{font-size:28px;font-weight:500;color:#1D9E75;}
+.stat-label{font-size:12px;color:var(--color-text-secondary);margin-top:4px;}
+section{padding:4rem 2rem;max-width:900px;margin:0 auto;}
+.section-label{font-size:12px;font-weight:500;color:#1D9E75;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;}
+.section-title{font-size:26px;font-weight:500;margin-bottom:0.75rem;}
+.section-sub{font-size:15px;color:var(--color-text-secondary);line-height:1.7;margin-bottom:2.5rem;}
+.cards-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem;}
+.card-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:16px;}
+.card-icon.teal{background:#E1F5EE;}
+.card-icon.blue{background:#E6F1FB;}
+.card-icon.purple{background:#EEEDFE;}
+.card-icon.amber{background:#FAEEDA;}
+.card h3{font-size:15px;font-weight:500;margin-bottom:8px;}
+.card p{font-size:13px;color:var(--color-text-secondary);line-height:1.6;}
+.tag{display:inline-block;font-size:11px;padding:3px 10px;border-radius:100px;margin-top:10px;font-weight:500;}
+.tag.teal{background:#E1F5EE;color:#0F6E56;}
+.tag.blue{background:#E6F1FB;color:#185FA5;}
+.tag.purple{background:#EEEDFE;color:#534AB7;}
+.tag.amber{background:#FAEEDA;color:#854F0B;}
+.service-row{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:4rem;}
+.service-row.reverse{direction:rtl;}
+.service-row.reverse > *{direction:ltr;}
+.service-content{}
+.service-content h3{font-size:20px;font-weight:500;margin-bottom:0.75rem;}
+.service-content p{font-size:14px;color:var(--color-text-secondary);line-height:1.7;margin-bottom:1rem;}
+.service-content ul{padding-left:0;list-style:none;}
+.service-content li{font-size:13px;color:var(--color-text-secondary);padding:6px 0;border-bottom:0.5px solid var(--color-border-tertiary);display:flex;align-items:flex-start;gap:8px;}
+.service-content li:last-child{border-bottom:none;}
+.li-dot{width:6px;height:6px;border-radius:50%;background:#1D9E75;flex-shrink:0;margin-top:6px;}
+.service-visual{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.5rem;min-height:200px;}
+.price-row{display:flex;align-items:baseline;gap:6px;margin-bottom:12px;}
+.price-num{font-size:22px;font-weight:500;color:#1D9E75;}
+.price-unit{font-size:13px;color:var(--color-text-secondary);}
+.divider{border:none;border-top:0.5px solid var(--color-border-tertiary);margin:3rem 0;}
+.training-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.training-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem;}
+.training-card.featured{border:2px solid #1D9E75;}
+.training-card .tc-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;}
+.tc-badge{font-size:11px;background:#E1F5EE;color:#0F6E56;padding:3px 10px;border-radius:100px;font-weight:500;}
+.tc-badge.hot{background:#FAEEDA;color:#854F0B;}
+.training-card h3{font-size:15px;font-weight:500;margin-bottom:8px;}
+.training-card p{font-size:13px;color:var(--color-text-secondary);line-height:1.6;margin-bottom:12px;}
+.tc-price{font-size:18px;font-weight:500;color:#1D9E75;}
+.tc-price span{font-size:12px;color:var(--color-text-secondary);font-weight:400;}
+.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.team-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem;text-align:center;}
+.avatar{width:56px;height:56px;border-radius:50%;background:#E1F5EE;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:20px;font-weight:500;color:#0F6E56;}
+.team-card h4{font-size:15px;font-weight:500;margin-bottom:4px;}
+.team-card .role{font-size:12px;color:#1D9E75;margin-bottom:8px;}
+.team-card p{font-size:12px;color:var(--color-text-secondary);line-height:1.6;}
+.cta-section{background:#0F6E56;border-radius:var(--border-radius-lg);padding:3rem;text-align:center;margin:2rem 0;}
+.cta-section h2{color:#fff;font-size:24px;font-weight:500;margin-bottom:0.75rem;}
+.cta-section p{color:rgba(255,255,255,0.75);font-size:15px;margin-bottom:1.5rem;}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-white{background:#fff;color:#0F6E56;border:none;padding:12px 28px;border-radius:var(--border-radius-md);font-size:14px;font-weight:500;cursor:pointer;}
+.btn-outline-white{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.4);padding:12px 28px;border-radius:var(--border-radius-md);font-size:14px;cursor:pointer;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+.contact-info h3{font-size:18px;font-weight:500;margin-bottom:1rem;}
+.contact-info p{font-size:14px;color:var(--color-text-secondary);line-height:1.7;margin-bottom:1.5rem;}
+.contact-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;}
+.ci-icon{width:32px;height:32px;background:#E1F5EE;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;}
+.ci-text{font-size:13px;color:var(--color-text-secondary);line-height:1.6;}
+.contact-form{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.5rem;}
+.contact-form h3{font-size:16px;font-weight:500;margin-bottom:1.25rem;}
+.form-group{margin-bottom:14px;}
+.form-group label{font-size:12px;color:var(--color-text-secondary);display:block;margin-bottom:6px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:8px 12px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);font-size:13px;background:var(--color-background-primary);color:var(--color-text-primary);font-family:var(--font-sans);}
+.form-group textarea{height:80px;resize:none;}
+.submit-btn{width:100%;background:#1D9E75;color:#fff;border:none;padding:10px;border-radius:var(--border-radius-md);font-size:14px;font-weight:500;cursor:pointer;margin-top:6px;}
+.footer{background:var(--color-background-primary);border-top:0.5px solid var(--color-border-tertiary);padding:2rem;text-align:center;}
+.footer p{font-size:12px;color:var(--color-text-secondary);}
+.section-anchor{scroll-margin-top:60px;}
+@media(max-width:640px){
+  .cards-3,.team-grid,.training-grid,.service-row,.contact-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:26px;}
+  .service-row.reverse{direction:ltr;}
+  .nav-links{display:none;}
+}
+</style>
+
+<div>
+<nav class="nav">
+  <div class="logo">超灵<span>智能</span></div>
+  <div class="nav-links">
+    <a onclick="scrollTo('services')">服务</a>
+    <a onclick="scrollTo('enterprise')">企业方案</a>
+    <a onclick="scrollTo('training')">个人培训</a>
+    <a onclick="scrollTo('about')">关于我们</a>
+    <a onclick="scrollTo('contact')">联系我们</a>
+  </div>
+  <button class="nav-cta" onclick="scrollTo('contact')">免费咨询 →</button>
+</nav>
+
+<div style="padding:0 1rem;">
+
+<div class="hero">
+  <div class="badge">珠三角 · AI 转型一站式服务商</div>
+  <h1>让每一家中小企业<br/>都能<em>真正用上 AI</em></h1>
+  <p>不卖概念，只卖结果。帮您的企业在 30 天内用上 AI，在 90 天内靠 AI 省钱或赚钱。</p>
+  <div class="hero-btns">
+    <button class="btn-primary" onclick="scrollTo('contact')">预约免费诊断</button>
+    <button class="btn-secondary" onclick="scrollTo('services')">了解服务</button>
+  </div>
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num">50+</div><div class="stat-label">目标服务企业</div></div>
+    <div class="stat-item"><div class="stat-num">30天</div><div class="stat-label">用上 AI</div></div>
+    <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">全栈创始人</div></div>
+    <div class="stat-item"><div class="stat-num">500万</div><div class="stat-label">珠三角中小企业</div></div>
+  </div>
+</div>
+
+<section id="services" class="section-anchor">
+  <div class="section-label">我们的服务</div>
+  <div class="section-title">三条业务线，覆盖 AI 转型全程</div>
+  <div class="section-sub">从认知启蒙到系统落地，从短期项目到长期陪伴，根据企业需求灵活组合。</div>
+  <div class="cards-3">
+    <div class="card">
+      <div class="card-icon teal" style="font-size:18px;">💡</div>
+      <h3>AI 咨询与培训</h3>
+      <p>讲座、内训、诊断报告、方案设计——帮老板和团队真正理解 AI、找到适合自己企业的切入点。</p>
+      <span class="tag teal">现金流快</span>
+    </div>
+    <div class="card">
+      <div class="card-icon blue" style="font-size:18px;">⚙️</div>
+      <h3>AI 项目实施</h3>
+      <p>企业知识库 RAG、智能客服 Agent、工作流改造——从代码到部署，全栈交付，有结果才算数。</p>
+      <span class="tag blue">客单价高</span>
+    </div>
+    <div class="card">
+      <div class="card-icon purple" style="font-size:18px;">🔗</div>
+      <h3>Token 代理服务</h3>
+      <p>提供 Claude / Gemini 等主流大模型 API 接入，免去海外支付和配置烦恼，按用量计费。</p>
+      <span class="tag purple">被动收入</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<section id="enterprise" class="section-anchor">
+  <div class="section-label">企业解决方案</div>
+  <div class="section-title">针对珠三角中小企业的落地方案</div>
+  <div class="section-sub">每一套方案都经过真实业务验证，不是 PPT，是可以跑起来的系统。</div>
+
+  <div class="service-row">
+    <div class="service-content">
+      <div class="tag teal" style="margin-bottom:12px;">RAG 知识库</div>
+      <h3>企业智能知识库</h3>
+      <p>将公司文档、产品手册、合同模板、客服问答全部向量化，员工和客户都能用自然语言秒速检索。</p>
+      <ul>
+        <li><span class="li-dot"></span>支持 PDF、Word、网页等多格式文档导入</li>
+        <li><span class="li-dot"></span>私有化部署，数据不出企业</li>
+        <li><span class="li-dot"></span>接入微信、企业微信、钉钉等平台</li>
+        <li><span class="li-dot"></span>实施周期 2-3 周</li>
+      </ul>
+    </div>
+    <div class="service-visual">
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:12px;">示意：知识库问答</div>
+      <div style="background:var(--color-background-secondary);border-radius:8px;padding:10px 14px;margin-bottom:8px;font-size:13px;">📄 上传了 386 份文档</div>
+      <div style="background:#E1F5EE;border-radius:8px;padding:10px 14px;margin-bottom:8px;font-size:13px;color:#085041;">问：我们的退货政策是多少天？</div>
+      <div style="background:var(--color-background-secondary);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--color-text-secondary);">答：根据您的《客服手册 v3.2》第 12 条，退货期为 <strong>30 天</strong>，需附原始发票...</div>
+    </div>
+  </div>
+
+  <div class="service-row reverse">
+    <div class="service-content">
+      <div class="tag blue" style="margin-bottom:12px;">Agent 开发</div>
+      <h3>智能客服 / 销售 Agent</h3>
+      <p>7×24 自动接待客户、产品推介、订单跟进，替代重复性人工工作，平均响应时间从分钟级降到秒级。</p>
+      <ul>
+        <li><span class="li-dot"></span>接入企业微信 / 微信小程序 / 网站</li>
+        <li><span class="li-dot"></span>可调用 CRM、ERP、库存系统</li>
+        <li><span class="li-dot"></span>支持多轮对话与意图识别</li>
+        <li><span class="li-dot"></span>实施周期 3-6 周</li>
+      </ul>
+    </div>
+    <div class="service-visual">
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:12px;">示意：销售 Agent 工作流</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="background:var(--color-background-secondary);border-radius:6px;padding:8px 12px;font-size:12px;display:flex;align-items:center;gap:8px;"><span style="color:#1D9E75;font-weight:500;">①</span> 客户发起咨询</div>
+        <div style="background:var(--color-background-secondary);border-radius:6px;padding:8px 12px;font-size:12px;display:flex;align-items:center;gap:8px;"><span style="color:#1D9E75;font-weight:500;">②</span> Agent 识别意图 + 查询库存</div>
+        <div style="background:var(--color-background-secondary);border-radius:6px;padding:8px 12px;font-size:12px;display:flex;align-items:center;gap:8px;"><span style="color:#1D9E75;font-weight:500;">③</span> 自动生成报价 / 推荐方案</div>
+        <div style="background:#E1F5EE;border-radius:6px;padding:8px 12px;font-size:12px;color:#085041;display:flex;align-items:center;gap:8px;"><span style="font-weight:500;">✓</span> 转化成功 或 转交人工</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="service-row">
+    <div class="service-content">
+      <div class="tag amber" style="margin-bottom:12px;">AI 工作流</div>
+      <h3>业务流程 AI 改造</h3>
+      <p>将日报汇总、合同审查、数据分析、内容生成等重复性工作自动化，每人每天节省 1-3 小时。</p>
+      <ul>
+        <li><span class="li-dot"></span>诊断现有流程，找出 AI 替代点</li>
+        <li><span class="li-dot"></span>接入 Claude / Gemini API</li>
+        <li><span class="li-dot"></span>培训团队实际使用</li>
+        <li><span class="li-dot"></span>实施周期 1-4 周</li>
+      </ul>
+    </div>
+    <div class="service-visual">
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:12px;">适用行业</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <span class="tag teal">电商/跨境</span>
+        <span class="tag blue">制造业</span>
+        <span class="tag purple">贸易公司</span>
+        <span class="tag amber">律所/会计</span>
+        <span class="tag teal">教育培训</span>
+        <span class="tag blue">专业服务</span>
+      </div>
+      <div style="margin-top:16px;padding:10px 14px;background:var(--color-background-secondary);border-radius:8px;">
+        <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:6px;">预算区间</div>
+        <div style="font-size:14px;font-weight:500;">小型项目：2 万 - 5 万</div>
+        <div style="font-size:14px;font-weight:500;">中型项目：5 万 - 15 万</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<hr class="divider"/>
+
+<section id="training" class="section-anchor">
+  <div class="section-label">个人 AI 培训</div>
+  <div class="section-title">从小白到实战，系统学会用 AI</div>
+  <div class="section-sub">不只讲原理，每堂课都有可以带走的工具和技巧。适合创业者、中层管理者、职场人士。</div>
+  <div class="training-grid">
+    <div class="training-card">
+      <div class="tc-head">
+        <div>
+          <div class="tc-badge">入门推荐</div>
+          <h3 style="margin-top:8px;">AI 工具实操营</h3>
+        </div>
+      </div>
+      <p>2 天线下集训，手把手教会你用 Claude、Gemini、Cowork 等主流 AI 工具处理工作中的真实场景。</p>
+      <ul style="list-style:none;padding:0;margin-bottom:12px;">
+        <li style="font-size:13px;color:var(--color-text-secondary);padding:4px 0;">✓ 提示词工程基础</li>
+        <li style="font-size:13px;color:var(--color-text-secondary);padding:4px 0;">✓ AI 写作、分析、总结实战</li>
+        <li style="font-size:13px;color:var(--color-text-secondary);padding:4px 0;">✓ 搭建自己的 AI 工作流</li>
+      </ul>
+      <div class="tc-price">¥1,980 <span>/ 人</span></div>
+    </div>
+    <div class="training-card featured">
+      <div class="tc-head">
+        <div>
+          <div class="tc-badge hot">最受欢迎</div>
+          <h3 style="margin-top:8px;">AI 创业者加速营</h3>
+        </div>
+      </div>
+      <p>6 周线上课程，专为想用 AI 开副业或转型的创业者设计。每周直播答疑 + 实战作业 + 社群支持。</p>
+      <ul style="list-style:none;padding:0;margin-bottom:12px;">
+        <li style="font-size:13px;color:var(--color-text-secondary);padding:4px 0;">✓ AI 选品/营销/客服实战</li>
+        <li style="font-size:13px;color:var(--color-text-secondary);padding:4px 0;">✓ 用 AI 搭建个人 IP</li>
+        <li style="font-size:13px;color:var(--color-text-secondary);padding:4px 0;">✓ Token 代理副业入门</li>
+      </ul>
+      <div class="tc-price">¥3,980 <span>/ 人</span></div>
+    </div>
+    <div class="training-card">
+      <div class="tc-head">
+        <div>
+          <div class="tc-badge">免费体验</div>
+          <h3 style="margin-top:8px;">AI 趋势公开讲座</h3>
+        </div>
+      </div>
+      <p>每月 1-2 场，1.5 小时，线下沙龙。了解最新 AI 动态，看真实案例演示，适合初步接触 AI 的企业主。</p>
+      <ul style="list-style:none;padding:0;margin-bottom:12px;">
+        <li style="font-size:13px;color:var(--color-text-secondary);padding:4px 0;">✓ AI 行业最新进展</li>
+        <li style="font-size:13px;color:var(--color-text-secondary);padding:4px 0;">✓ 现场工具演示</li>
+        <li style="font-size:13px;color:var(--color-text-secondary);padding:4px 0;">✓ 1v1 免费咨询机会</li>
+      </ul>
+      <div class="tc-price">免费 <span>限额 30 人</span></div>
+    </div>
+    <div class="training-card">
+      <div class="tc-head">
+        <div>
+          <div class="tc-badge">企业专属</div>
+          <h3 style="margin-top:8px;">企业 AI 内训定制</h3>
+        </div>
+      </div>
+      <p>上门为您的团队量身定制培训内容，从基础认知到行业场景实操，支持半天到多天形式。</p>
+      <ul style="list-style:none;padding:0;margin-bottom:12px;">
+        <li style="font-size:13px;color:var(--color-text-secondary);padding:4px 0;">✓ 根据行业定制案例</li>
+        <li style="font-size:13px;color:var(--color-text-secondary);padding:4px 0;">✓ 全员可用，学完即用</li>
+        <li style="font-size:13px;color:var(--color-text-secondary);padding:4px 0;">✓ 含后续工具支持</li>
+      </ul>
+      <div class="tc-price">¥3,000起 <span>/ 天</span></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<section id="about" class="section-anchor">
+  <div class="section-label">关于我们</div>
+  <div class="section-title">三位全栈联合创始人，扎根东莞</div>
+  <div class="section-sub">我们不是大厂下来做 AI 的，而是真正在一线跑过业务、写过代码、落地过项目的实战团队。</div>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="avatar">A</div>
+      <h4>内容 · 市场</h4>
+      <div class="role">个人 IP & 获客</div>
+      <p>负责 B 站视频、公众号内容输出、讲座演讲和商务拓展，帮公司建立行业影响力。</p>
+    </div>
+    <div class="team-card">
+      <div class="avatar">B</div>
+      <h4>咨询 · 销售</h4>
+      <div class="role">客户关系 & 商务</div>
+      <p>深度客户沟通、需求诊断、方案写作到合同签约，确保每个客户都有可落地的方向。</p>
+    </div>
+    <div class="team-card">
+      <div class="avatar">C</div>
+      <h4>技术 · 交付</h4>
+      <div class="role">技术实施 & 运维</div>
+      <p>RAG / Agent 开发、Token 中转站运维、项目全程技术交付，保障每个方案真正跑起来。</p>
+    </div>
+  </div>
+  <div style="margin-top:2rem;background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.5rem;">
+    <div style="font-size:14px;font-weight:500;margin-bottom:1rem;">核心技术栈</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;">
+      <span class="tag teal">Claude API</span>
+      <span class="tag teal">Gemini API</span>
+      <span class="tag blue">RAG / Vector DB</span>
+      <span class="tag blue">LangChain</span>
+      <span class="tag purple">Claude Code</span>
+      <span class="tag purple">Cowork</span>
+      <span class="tag amber">Manus</span>
+      <span class="tag amber">OpenClaw</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta-section">
+    <h2>30 天内让您的企业用上 AI</h2>
+    <p>先做免费诊断，找到最适合您企业的 AI 落地场景，再决定是否合作。</p>
+    <div class="cta-btns">
+      <button class="btn-white" onclick="scrollTo('contact')">预约免费诊断</button>
+      <button class="btn-outline-white" onclick="scrollTo('training')">查看培训课程</button>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section-anchor">
+  <div class="section-label">联系我们</div>
+  <div class="section-title">预约咨询 · 东莞 · 珠三角</div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>欢迎联系我们</h3>
+      <p>无论您是企业主、创业者，还是对 AI 感兴趣的个人，都欢迎来聊聊。第一次沟通免费，没有压力。</p>
+      <div class="contact-item">
+        <div class="ci-icon">📍</div>
+        <div class="ci-text"><strong>地址</strong><br/>广东省东莞市（服务珠三角全区）</div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon">📱</div>
+        <div class="ci-text"><strong>微信 / 电话</strong><br/>添加微信，备注"AI咨询"</div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon">📺</div>
+        <div class="ci-text"><strong>B 站 / 公众号</strong><br/>搜索"超灵智能"关注获取最新资讯</div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon">📧</div>
+        <div class="ci-text"><strong>邮箱</strong><br/>hello@chaolng.ai（即将开通）</div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>留下您的信息</h3>
+      <div class="form-group">
+        <label>您的姓名</label>
+        <input type="text" placeholder="王总 / 李总..."/>
+      </div>
+      <div class="form-group">
+        <label>公司名称</label>
+        <input type="text" placeholder="公司名称"/>
+      </div>
+      <div class="form-group">
+        <label>联系方式（微信/手机）</label>
+        <input type="text" placeholder="方便联系您的方式"/>
+      </div>
+      <div class="form-group">
+        <label>您最感兴趣的服务</label>
+        <select>
+          <option>免费 AI 讲座</option>
+          <option>AI 诊断咨询</option>
+          <option>企业 AI 项目实施</option>
+          <option>个人 AI 培训</option>
+          <option>Token 代理服务</option>
+          <option>其他</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>简单说说您的需求（选填）</label>
+        <textarea placeholder="我们公司做电商，想用 AI 提升客服效率..."></textarea>
+      </div>
+      <button class="submit-btn" onclick="handleSubmit()">提交信息，等待联系 →</button>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="footer">
+  <p>© 2026 超灵智能 · 东莞 · 珠三角 AI 转型一站式服务商</p>
+</div>
+</div>
+
+<script>
+function scrollTo(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+function handleSubmit(){
+  const btn = document.querySelector('.submit-btn');
+  btn.textContent = '✓ 已提交！我们将在 24 小时内联系您';
+  btn.style.background = '#085041';
+  btn.disabled = true;
+}
+</script>

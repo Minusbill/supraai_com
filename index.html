@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta -->
+  <title>超灵智能 | 珠三角中小企业 AI 转型一站式服务商</title>
+  <meta name="description" content="超灵智能专注于为珠三角中小企业提供 AI 咨询、培训、项目实施与长期顾问服务。30 天内让您的企业用上 AI，90 天内靠 AI 省钱或赚钱。" />
+  <meta name="keywords" content="AI咨询,AI培训,企业AI转型,RAG知识库,智能客服,珠三角,东莞,深圳,广州,超灵智能,中小企业AI" />
+  <meta name="author" content="超灵智能" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="超灵智能 | 珠三角中小企业 AI 转型一站式服务商" />
+  <meta property="og:description" content="不卖概念，只卖结果——让每一家中小企业都能在 30 天内用上 AI，在 90 天内靠 AI 省钱或赚钱。" />
+  <meta property="og:url" content="https://chaolng.ai" />
+  <meta property="og:site_name" content="超灵智能" />
+  <meta property="og:locale" content="zh_CN" />
+  <!-- <meta property="og:image" content="https://chaolng.ai/images/og-cover.png" /> -->
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://chaolng.ai" />
+</head>
+<body>
+
+  <!-- ==================== Navigation ==================== -->
+  <nav class="nav" role="navigation" aria-label="主导航">
+    <a href="/" class="logo" aria-label="超灵智能首页">超灵<span>智能</span></a>
+    <div class="nav-links" id="navLinks">
+      <a data-section="services" onclick="scrollToSection('services')">服务</a>
+      <a data-section="enterprise" onclick="scrollToSection('enterprise')">企业方案</a>
+      <a data-section="cases" onclick="scrollToSection('cases')">案例</a>
+      <a data-section="mcp-dev" onclick="scrollToSection('mcp-dev')">技术服务</a>
+      <a data-section="training" onclick="scrollToSection('training')">培训</a>
+      <a data-section="about" onclick="scrollToSection('about')">关于</a>
+      <a data-section="contact" onclick="scrollToSection('contact')">联系</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <button class="nav-cta" onclick="scrollToSection('contact')">免费咨询 →</button>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== Main Content ==================== -->
+  <main class="main-content">
+
+    <!-- ===== Hero ===== -->
+    <header class="hero">
+      <div class="badge">珠三角 · AI 转型一站式服务商</div>
+      <h1>让每一家中小企业<br/>都能<em>真正用上 AI</em></h1>
+      <p>不卖概念，只卖结果。帮您的企业在 30 天内用上 AI，在 90 天内靠 AI 省钱或赚钱。</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="scrollToSection('contact')">预约免费诊断</button>
+        <button class="btn-secondary" onclick="scrollToSection('services')">了解服务</button>
+      </div>
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">目标服务企业</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">30天</div>
+          <div class="stat-label">用上 AI</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">3</div>
+          <div class="stat-label">全栈创始人</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">500万</div>
+          <div class="stat-label">珠三角中小企业</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Services ===== -->
+    <section id="services" class="section-anchor fade-in">
+      <div class="section-label">我们的服务</div>
+      <h2 class="section-title">三条业务线，覆盖 AI 转型全程</h2>
+      <p class="section-sub">从认知启蒙到系统落地，从短期项目到长期陪伴，根据企业需求灵活组合。</p>
+      <div class="cards-3">
+        <div class="card">
+          <div class="card-icon teal">💡</div>
+          <h3>AI 咨询与培训</h3>
+          <p>讲座、内训、诊断报告、方案设计——帮老板和团队真正理解 AI、找到适合自己企业的切入点。</p>
+          <span class="tag teal">现金流快</span>
+        </div>
+        <div class="card">
+          <div class="card-icon blue">⚙️</div>
+          <h3>AI 项目实施</h3>
+          <p>企业知识库 RAG、智能客服 Agent、工作流改造——从代码到部署，全栈交付，有结果才算数。</p>
+          <span class="tag blue">客单价高</span>
+        </div>
+        <div class="card">
+          <div class="card-icon purple">🔗</div>
+          <h3>Token 代理服务</h3>
+          <p>提供 Claude / Gemini 等主流大模型 API 接入，免去海外支付和配置烦恼，按用量计费。</p>
+          <span class="tag purple">被动收入</span>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ===== Enterprise Solutions ===== -->
+    <section id="enterprise" class="section-anchor fade-in">
+      <div class="section-label">企业解决方案</div>
+      <h2 class="section-title">针对珠三角中小企业的落地方案</h2>
+      <p class="section-sub">每一套方案都经过真实业务验证，不是 PPT，是可以跑起来的系统。</p>
+
+      <!-- RAG Knowledge Base -->
+      <div class="service-row fade-in">
+        <div class="service-content">
+          <span class="tag teal" style="margin-bottom:12px;">RAG 知识库</span>
+          <h3>企业智能知识库</h3>
+          <p>将公司文档、产品手册、合同模板、客服问答全部向量化，员工和客户都能用自然语言秒速检索。</p>
+          <ul>
+            <li><span class="li-dot"></span>支持 PDF、Word、网页等多格式文档导入</li>
+            <li><span class="li-dot"></span>私有化部署，数据不出企业</li>
+            <li><span class="li-dot"></span>接入微信、企业微信、钉钉等平台</li>
+            <li><span class="li-dot"></span>实施周期 2-3 周</li>
+          </ul>
+        </div>
+        <div class="service-visual">
+          <div class="sv-label">示意：知识库问答</div>
+          <div class="sv-item">📄 上传了 386 份文档</div>
+          <div class="sv-highlight">问：我们的退货政策是多少天？</div>
+          <div class="sv-item" style="color:var(--color-text-secondary);">答：根据您的《客服手册 v3.2》第 12 条，退货期为 <strong>30 天</strong>，需附原始发票...</div>
+        </div>
+      </div>
+
+      <!-- Agent Development -->
+      <div class="service-row reverse fade-in">
+        <div class="service-content">
+          <span class="tag blue" style="margin-bottom:12px;">Agent 开发</span>
+          <h3>智能客服 / 销售 Agent</h3>
+          <p>7×24 自动接待客户、产品推介、订单跟进，替代重复性人工工作，平均响应时间从分钟级降到秒级。</p>
+          <ul>
+            <li><span class="li-dot"></span>接入企业微信 / 微信小程序 / 网站</li>
+            <li><span class="li-dot"></span>可调用 CRM、ERP、库存系统</li>
+            <li><span class="li-dot"></span>支持多轮对话与意图识别</li>
+            <li><span class="li-dot"></span>实施周期 3-6 周</li>
+          </ul>
+        </div>
+        <div class="service-visual">
+          <div class="sv-label">示意：销售 Agent 工作流</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div class="sv-step"><span class="sv-step-num">①</span> 客户发起咨询</div>
+            <div class="sv-step"><span class="sv-step-num">②</span> Agent 识别意图 + 查询库存</div>
+            <div class="sv-step"><span class="sv-step-num">③</span> 自动生成报价 / 推荐方案</div>
+            <div class="sv-success"><span style="font-weight:600;">✓</span> 转化成功 或 转交人工</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Workflow -->
+      <div class="service-row fade-in">
+        <div class="service-content">
+          <span class="tag amber" style="margin-bottom:12px;">AI 工作流</span>
+          <h3>业务流程 AI 改造</h3>
+          <p>将日报汇总、合同审查、数据分析、内容生成等重复性工作自动化，每人每天节省 1-3 小时。</p>
+          <ul>
+            <li><span class="li-dot"></span>诊断现有流程，找出 AI 替代点</li>
+            <li><span class="li-dot"></span>接入 Claude / Gemini API</li>
+            <li><span class="li-dot"></span>培训团队实际使用</li>
+            <li><span class="li-dot"></span>实施周期 1-4 周</li>
+          </ul>
+        </div>
+        <div class="service-visual">
+          <div class="sv-label">适用行业</div>
+          <div class="sv-tags">
+            <span class="tag teal">电商/跨境</span>
+            <span class="tag blue">制造业</span>
+            <span class="tag purple">贸易公司</span>
+            <span class="tag amber">律所/会计</span>
+            <span class="tag teal">教育培训</span>
+            <span class="tag blue">专业服务</span>
+          </div>
+          <div class="sv-budget">
+            <div class="sv-budget-label">预算区间</div>
+            <div class="sv-budget-item">小型项目：2 万 - 5 万</div>
+            <div class="sv-budget-item">中型项目：5 万 - 15 万</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ===== Cases ===== -->
+    <section id="cases" class="section-anchor fade-in">
+      <div class="section-label">项目案例</div>
+      <h2 class="section-title">真实落地，用结果说话</h2>
+      <p class="section-sub">每一个案例都是从需求诊断到系统上线的完整交付，以下是部分代表性项目。</p>
+      <div class="cases-grid">
+        <!-- Case 1 -->
+        <div class="case-card">
+          <div class="case-header">
+            <div class="case-icon" style="background: var(--color-blue-bg);">🛒</div>
+            <div class="case-header-text">
+              <h3>跨境电商智能客服 Agent</h3>
+              <span class="case-industry">跨境电商 · 深圳</span>
+            </div>
+          </div>
+          <p>为某跨境电商企业搭建多语言智能客服系统，接入企业微信与 Shopify 后台，实现 7×24 自动回复、订单查询和售后处理。</p>
+          <div class="case-metrics">
+            <div class="case-metric">
+              <div class="metric-value">10秒</div>
+              <div class="metric-label">平均响应时间</div>
+            </div>
+            <div class="case-metric">
+              <div class="metric-value">60%</div>
+              <div class="metric-label">人工工作量减少</div>
+            </div>
+            <div class="case-metric">
+              <div class="metric-value">3周</div>
+              <div class="metric-label">交付周期</div>
+            </div>
+          </div>
+        </div>
+        <!-- Case 2 -->
+        <div class="case-card">
+          <div class="case-header">
+            <div class="case-icon" style="background: var(--color-teal-bg);">🏭</div>
+            <div class="case-header-text">
+              <h3>制造企业 RAG 知识库</h3>
+              <span class="case-industry">制造业 · 东莞</span>
+            </div>
+          </div>
+          <p>将 386 份产品手册、质检标准、操作规程向量化，员工用自然语言即可秒级检索，新员工培训时间大幅缩短。</p>
+          <div class="case-metrics">
+            <div class="case-metric">
+              <div class="metric-value">386份</div>
+              <div class="metric-label">文档入库</div>
+            </div>
+            <div class="case-metric">
+              <div class="metric-value">秒级</div>
+              <div class="metric-label">检索响应</div>
+            </div>
+            <div class="case-metric">
+              <div class="metric-value">70%</div>
+              <div class="metric-label">培训时间缩短</div>
+            </div>
+          </div>
+        </div>
+        <!-- Case 3 -->
+        <div class="case-card">
+          <div class="case-header">
+            <div class="case-icon" style="background: var(--color-purple-bg);">⚖️</div>
+            <div class="case-header-text">
+              <h3>律所合同审查 AI 助手</h3>
+              <span class="case-industry">法律服务 · 广州</span>
+            </div>
+          </div>
+          <p>基于 Claude API 开发合同智能审查系统，自动识别风险条款、缺失条款，并给出修改建议，大幅提升律师审查效率。</p>
+          <div class="case-metrics">
+            <div class="case-metric">
+              <div class="metric-value">40%</div>
+              <div class="metric-label">审查成本降低</div>
+            </div>
+            <div class="case-metric">
+              <div class="metric-value">5分钟</div>
+              <div class="metric-label">单份合同审查</div>
+            </div>
+            <div class="case-metric">
+              <div class="metric-value">98%</div>
+              <div class="metric-label">风险识别率</div>
+            </div>
+          </div>
+        </div>
+        <!-- Case 4 -->
+        <div class="case-card">
+          <div class="case-header">
+            <div class="case-icon" style="background: var(--color-amber-bg);">📊</div>
+            <div class="case-header-text">
+              <h3>贸易公司 AI 工作流改造</h3>
+              <span class="case-industry">国际贸易 · 佛山</span>
+            </div>
+          </div>
+          <p>诊断并改造日报汇总、询盘回复、报价生成等重复性流程，接入 Gemini API 实现半自动化，团队整体效率提升。</p>
+          <div class="case-metrics">
+            <div class="case-metric">
+              <div class="metric-value">2小时</div>
+              <div class="metric-label">每人每天节省</div>
+            </div>
+            <div class="case-metric">
+              <div class="metric-value">1周</div>
+              <div class="metric-label">实施周期</div>
+            </div>
+            <div class="case-metric">
+              <div class="metric-value">3倍</div>
+              <div class="metric-label">询盘处理速度</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ===== MCP & Skill Development ===== -->
+    <section id="mcp-dev" class="section-anchor fade-in">
+      <div class="section-label">技术服务</div>
+      <h2 class="section-title">MCP Server & AI Skill 定制开发</h2>
+      <p class="section-sub">基于 Model Context Protocol 标准协议，为企业打造专属的 AI 数据连接器和智能工作技能包。</p>
+
+      <div class="mcp-hero">
+        <div class="mcp-hero-content">
+          <h3>让 AI 直接读写你的业务系统</h3>
+          <p>MCP（Model Context Protocol）是 AI 领域的标准数据连接协议。我们为企业开发定制 MCP Server，让 Claude、Cursor、Craft Agent 等 AI 工具直接连接您的 ERP、CRM、OA 系统，实现数据双向流通。</p>
+          <div class="mcp-tech-tags">
+            <span class="mcp-tech-tag">TypeScript</span>
+            <span class="mcp-tech-tag">Python</span>
+            <span class="mcp-tech-tag">MCP SDK</span>
+            <span class="mcp-tech-tag">REST API</span>
+            <span class="mcp-tech-tag">OAuth 2.0</span>
+            <span class="mcp-tech-tag">Private Deploy</span>
+          </div>
+        </div>
+        <div class="mcp-code-visual">
+          <span class="code-line"><span class="code-comment">// 自定义 MCP Server 示例</span></span>
+          <span class="code-line"><span class="code-keyword">const</span> server = <span class="code-keyword">new</span> MCPServer({</span>
+          <span class="code-line">&nbsp;&nbsp;name: <span class="code-string">"your-erp-connector"</span>,</span>
+          <span class="code-line">&nbsp;&nbsp;version: <span class="code-string">"1.0.0"</span>,</span>
+          <span class="code-line">});</span>
+          <span class="code-line"></span>
+          <span class="code-line">server.addTool({</span>
+          <span class="code-line">&nbsp;&nbsp;name: <span class="code-string">"query_inventory"</span>,</span>
+          <span class="code-line">&nbsp;&nbsp;description: <span class="code-string">"查询库存"</span>,</span>
+          <span class="code-line">&nbsp;&nbsp;<span class="code-keyword">async</span> execute(params) {</span>
+          <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span> <span class="code-keyword">await</span> erp.getStock(</span>
+          <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;params.productId</span>
+          <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;);</span>
+          <span class="code-line">&nbsp;&nbsp;}</span>
+          <span class="code-line">});</span>
+        </div>
+      </div>
+
+      <div class="mcp-cards">
+        <div class="mcp-card">
+          <div class="mcp-card-icon">🔌</div>
+          <h4>MCP Server 定制</h4>
+          <p>为企业内部系统开发专属 MCP 数据连接器，支持 ERP、CRM、OA、数据库等各类系统对接。</p>
+          <ul>
+            <li>标准 MCP 协议，兼容主流 AI 工具</li>
+            <li>支持 SSE / WebSocket 实时通信</li>
+            <li>OAuth 安全认证，数据权限管控</li>
+            <li>私有化部署，数据不出企业</li>
+          </ul>
+        </div>
+        <div class="mcp-card">
+          <div class="mcp-card-icon" style="background: var(--color-blue-bg);">🧠</div>
+          <h4>AI Skill 开发</h4>
+          <p>定制行业专属 AI 工作技能包，让 AI 助手按照您的业务规范和流程执行专业任务。</p>
+          <ul>
+            <li>合同审查 / 财务分析 / 客服话术</li>
+            <li>行业知识内置，开箱即用</li>
+            <li>可组合、可复用的模块化设计</li>
+            <li>持续迭代，按需升级</li>
+          </ul>
+        </div>
+        <div class="mcp-card">
+          <div class="mcp-card-icon" style="background: var(--color-purple-bg);">🔗</div>
+          <h4>系统集成服务</h4>
+          <p>将 MCP Server + AI Skill 与现有工具链深度集成，打通从数据到决策的完整 AI 工作流。</p>
+          <ul>
+            <li>Claude / Cursor / Craft Agent 集成</li>
+            <li>企业微信 / 钉钉 / 飞书对接</li>
+            <li>自动化工作流编排</li>
+            <li>全程技术支持与运维</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ===== Training ===== -->
+    <section id="training" class="section-anchor fade-in">
+      <div class="section-label">个人 AI 培训</div>
+      <h2 class="section-title">从小白到实战，系统学会用 AI</h2>
+      <p class="section-sub">不只讲原理，每堂课都有可以带走的工具和技巧。适合创业者、中层管理者、职场人士。</p>
+      <div class="training-grid">
+        <!-- Card 1 -->
+        <div class="training-card">
+          <div class="tc-head">
+            <div>
+              <span class="tc-badge">入门推荐</span>
+              <h3>AI 工具实操营</h3>
+            </div>
+          </div>
+          <p>2 天线下集训，手把手教会你用 Claude、Gemini、Cowork 等主流 AI 工具处理工作中的真实场景。</p>
+          <ul>
+            <li>✓ 提示词工程基础</li>
+            <li>✓ AI 写作、分析、总结实战</li>
+            <li>✓ 搭建自己的 AI 工作流</li>
+          </ul>
+          <div class="tc-price">¥1,980 <span>/ 人</span></div>
+        </div>
+
+        <!-- Card 2 (Featured) -->
+        <div class="training-card featured">
+          <div class="tc-head">
+            <div>
+              <span class="tc-badge hot">最受欢迎</span>
+              <h3>AI 创业者加速营</h3>
+            </div>
+          </div>
+          <p>6 周线上课程，专为想用 AI 开副业或转型的创业者设计。每周直播答疑 + 实战作业 + 社群支持。</p>
+          <ul>
+            <li>✓ AI 选品/营销/客服实战</li>
+            <li>✓ 用 AI 搭建个人 IP</li>
+            <li>✓ Token 代理副业入门</li>
+          </ul>
+          <div class="tc-price">¥3,980 <span>/ 人</span></div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="training-card">
+          <div class="tc-head">
+            <div>
+              <span class="tc-badge">免费体验</span>
+              <h3>AI 趋势公开讲座</h3>
+            </div>
+          </div>
+          <p>每月 1-2 场，1.5 小时，线下沙龙。了解最新 AI 动态，看真实案例演示，适合初步接触 AI 的企业主。</p>
+          <ul>
+            <li>✓ AI 行业最新进展</li>
+            <li>✓ 现场工具演示</li>
+            <li>✓ 1v1 免费咨询机会</li>
+          </ul>
+          <div class="tc-price">免费 <span>限额 30 人</span></div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="training-card">
+          <div class="tc-head">
+            <div>
+              <span class="tc-badge">企业专属</span>
+              <h3>企业 AI 内训定制</h3>
+            </div>
+          </div>
+          <p>上门为您的团队量身定制培训内容，从基础认知到行业场景实操，支持半天到多天形式。</p>
+          <ul>
+            <li>✓ 根据行业定制案例</li>
+            <li>✓ 全员可用，学完即用</li>
+            <li>✓ 含后续工具支持</li>
+          </ul>
+          <div class="tc-price">¥3,000起 <span>/ 天</span></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section-anchor fade-in">
+      <div class="section-label">关于我们</div>
+      <h2 class="section-title">三位全栈联合创始人，扎根东莞</h2>
+      <p class="section-sub">我们不是大厂下来做 AI 的，而是真正在一线跑过业务、写过代码、落地过项目的实战团队。</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="avatar">A</div>
+          <h4>内容 · 市场</h4>
+          <div class="role">个人 IP & 获客</div>
+          <p>负责 B 站视频、公众号内容输出、讲座演讲和商务拓展，帮公司建立行业影响力。</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar">B</div>
+          <h4>咨询 · 销售</h4>
+          <div class="role">客户关系 & 商务</div>
+          <p>深度客户沟通、需求诊断、方案写作到合同签约，确保每个客户都有可落地的方向。</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar">C</div>
+          <h4>技术 · 交付</h4>
+          <div class="role">技术实施 & 运维</div>
+          <p>RAG / Agent 开发、Token 中转站运维、项目全程技术交付，保障每个方案真正跑起来。</p>
+        </div>
+      </div>
+      <div class="tech-stack">
+        <div class="tech-stack-title">核心技术栈</div>
+        <div class="tech-stack-tags">
+          <span class="tag teal">Claude API</span>
+          <span class="tag teal">Gemini API</span>
+          <span class="tag blue">RAG / Vector DB</span>
+          <span class="tag blue">LangChain</span>
+          <span class="tag purple">Claude Code</span>
+          <span class="tag purple">Cowork</span>
+          <span class="tag amber">Manus</span>
+          <span class="tag amber">OpenClaw</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="fade-in">
+      <div class="cta-section">
+        <h2>30 天内让您的企业用上 AI</h2>
+        <p>先做免费诊断，找到最适合您企业的 AI 落地场景，再决定是否合作。</p>
+        <div class="cta-btns">
+          <button class="btn-white" onclick="scrollToSection('contact')">预约免费诊断</button>
+          <button class="btn-outline-white" onclick="scrollToSection('training')">查看培训课程</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section-anchor fade-in">
+      <div class="section-label">联系我们</div>
+      <h2 class="section-title">预约咨询 · 东莞 · 珠三角</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>欢迎联系我们</h3>
+          <p>无论您是企业主、创业者，还是对 AI 感兴趣的个人，都欢迎来聊聊。第一次沟通免费，没有压力。</p>
+          <div class="contact-item">
+            <div class="ci-icon">📍</div>
+            <div class="ci-text"><strong>地址</strong><br/>广东省东莞市（服务珠三角全区）</div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📱</div>
+            <div class="ci-text"><strong>微信 / 电话</strong><br/>添加微信，备注"AI咨询"</div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📺</div>
+            <div class="ci-text"><strong>B 站 / 公众号</strong><br/>搜索"超灵智能"关注获取最新资讯</div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📧</div>
+            <div class="ci-text"><strong>邮箱</strong><br/>hello@chaolng.ai（即将开通）</div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <h3>留下您的信息</h3>
+          <div class="form-group">
+            <label for="formName">您的姓名 *</label>
+            <input type="text" id="formName" placeholder="王总 / 李总..." required />
+          </div>
+          <div class="form-group">
+            <label for="formCompany">公司名称</label>
+            <input type="text" id="formCompany" placeholder="公司名称" />
+          </div>
+          <div class="form-group">
+            <label for="formContact">联系方式（微信/手机）*</label>
+            <input type="text" id="formContact" placeholder="方便联系您的方式" required />
+          </div>
+          <div class="form-group">
+            <label for="formService">您最感兴趣的服务</label>
+            <select id="formService">
+              <option value="免费 AI 讲座">免费 AI 讲座</option>
+              <option value="AI 诊断咨询">AI 诊断咨询</option>
+              <option value="企业 AI 项目实施">企业 AI 项目实施</option>
+              <option value="MCP/Skill 定制开发">MCP / Skill 定制开发</option>
+              <option value="个人 AI 培训">个人 AI 培训</option>
+              <option value="Token 代理服务">Token 代理服务</option>
+              <option value="其他">其他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="formMessage">简单说说您的需求（选填）</label>
+            <textarea id="formMessage" placeholder="我们公司做电商，想用 AI 提升客服效率..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">提交信息，等待联系 →</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="footer">
+    <p>© 2026 超灵智能 · 东莞 · 珠三角 AI 转型一站式服务商</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
