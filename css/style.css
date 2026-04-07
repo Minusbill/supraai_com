@@ -370,7 +370,23 @@ section { padding: 4rem 2rem; max-width: var(--max-width); margin: 0 auto; }
   font-size: 13px;
   color: var(--color-text-secondary);
   line-height: 1.6;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+}
+.flow-details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+}
+.flow-details li {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  padding: 2px 0;
+}
+.flow-details li::before {
+  content: "·";
+  margin-right: 6px;
+  color: var(--brand-primary);
+  font-weight: 700;
 }
 .flow-tag {
   display: inline-block;
