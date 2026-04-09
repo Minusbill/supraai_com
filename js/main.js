@@ -30,20 +30,32 @@ function initNavigation() {
         links.classList.remove("open");
       });
     });
+  }
 
-    // Mobile dropdown toggle
-    const dropdownTrigger = links.querySelector(".nav-dropdown-trigger");
-    if (dropdownTrigger) {
-      dropdownTrigger.addEventListener("click", (e) => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          const menu = dropdownTrigger.closest(".nav-dropdown").querySelector(".nav-dropdown-menu");
-          if (menu) {
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
-          }
-        }
+  // Dropdown: click to toggle (desktop + mobile unified)
+  const dropdownTrigger = document.querySelector(".nav-dropdown-trigger");
+  const dropdown = document.querySelector(".nav-dropdown");
+  if (dropdownTrigger && dropdown) {
+    dropdownTrigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropdown.classList.toggle("open");
+    });
+
+    // Click outside to close
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove("open");
+      }
+    });
+
+    // Close after clicking a dropdown link
+    const dropdownLinks = dropdown.querySelectorAll(".nav-dropdown-menu a");
+    dropdownLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        dropdown.classList.remove("open");
       });
-    }
+    });
   }
 
   // Nav shadow on scroll
