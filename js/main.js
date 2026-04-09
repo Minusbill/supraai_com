@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollAnimations();
   initContactForm();
   initNavHighlight();
+  initSideNav();
 });
 
 /* === Navigation === */
@@ -207,3 +208,59 @@ shakeStyle.textContent = `
   .shake { animation: shake 0.4s ease; }
 `;
 document.head.appendChild(shakeStyle);
+
+/* === Side Nav (左侧悬浮导航) === */
+function initSideNav() {
+  const sideNav = document.getElementById("sideNav");
+  if (!sideNav) return;
+
+  const items = sideNav.querySelectorAll(".side-nav-item");
+  const targets = [];
+
+  items.forEach((item) => {
+    const id = item.getAttribute("data-target");
+    const el = document.getElementById(id);
+    if (el) targets.push({ item, el });
+  });
+
+  if (!targets.length) return;
+
+  // Show/hide side nav based on scroll position
+  const hero = document.querySelector(".hero");
+  const showAfter = hero ? hero.offsetTop + hero.offsetHeight - 100 : 300;
+
+  function updateSideNav() {
+    // Show/hide
+    if (window.scrollY > showAfter) {
+      sideNav.classList.add("visible");
+    } else {
+      sideNav.classList.remove("visible");
+    }
+
+    // Highlight active section
+    let current = null;
+    for (let i = targets.length - 1; i >= 0; i--) {
+      const rect = targets[i].el.getBoundingClientRect();
+      if (rect.top <= 150) {
+        current = targets[i];
+        break;
+      }
+    }
+
+    targets.forEach((t) => t.item.classList.remove("active"));
+    if (current) current.item.classList.add("active");
+  }
+
+  window.addEventListener("scroll", updateSideNav, { passive: true });
+  updateSideNav();
+
+  // Smooth scroll on click
+  items.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      const id = item.getAttribute("data-target");
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+}

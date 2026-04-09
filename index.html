@@ -28,6 +28,15 @@
 
   <main class="main-content">
 
+    <!-- 左侧悬浮导航 -->
+    <nav class="side-nav" id="sideNav">
+      <a href="#sec-services" class="side-nav-item" data-target="sec-services">服务模式</a>
+      <a href="#sec-industries" class="side-nav-item" data-target="sec-industries">服务行业</a>
+      <a href="#sec-cases" class="side-nav-item" data-target="sec-cases">项目案例</a>
+      <a href="#sec-dev" class="side-nav-item" data-target="sec-dev">定制开发</a>
+      <a href="#sec-training" class="side-nav-item" data-target="sec-training">培训课程</a>
+    </nav>
+
     <!-- Hero -->
     <header class="hero">
       <div class="badge">大湾区 · AI 转型一站式服务商</div>
@@ -38,14 +47,14 @@
         <button class="btn-secondary" onclick="location.href='pages/services.html'">了解服务</button>
       </div>
       <div class="stats">
-        <div class="stat-item"><div class="stat-num">500</div><div class="stat-label">目标服务企业</div></div>
+        <div class="stat-item"><div class="stat-num">1000</div><div class="stat-label">目标服务企业</div></div>
         <div class="stat-item"><div class="stat-num">12+</div><div class="stat-label">覆盖行业</div></div>
         <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">全栈交付</div></div>
       </div>
     </header>
 
     <!-- Services Summary -->
-    <section class="section-anchor fade-in">
+    <section class="section-anchor fade-in" id="sec-services">
       <div class="section-label">服务模式</div>
       <h2 class="section-title">从诊断到落地，全程陪跑</h2>
       <p class="section-sub">每家企业情况不同，我们不套模板。先了解您的业务，再给最适合的方案。</p>
@@ -83,7 +92,7 @@
     <hr class="divider" />
 
     <!-- Industries Summary (6 items) -->
-    <section class="section-anchor fade-in">
+    <section class="section-anchor fade-in" id="sec-industries">
       <div class="section-label">服务行业</div>
       <h2 class="section-title">深入理解您的行业</h2>
       <p class="section-sub">我们不做通用方案。每次合作前先深入了解您的业务，再给出最适合的 AI 落地建议。</p>
@@ -103,7 +112,7 @@
     <hr class="divider" />
 
     <!-- Cases Summary (2 items) -->
-    <section class="section-anchor fade-in">
+    <section class="section-anchor fade-in" id="sec-cases">
       <div class="section-label">项目案例</div>
       <h2 class="section-title">真实落地，用结果说话</h2>
       <p class="section-sub">每个项目都从业务诊断开始，找准方向再动手，确保投入有回报。</p>
@@ -141,7 +150,7 @@
     <hr class="divider" />
 
     <!-- MCP Dev Summary -->
-    <section class="section-anchor fade-in">
+    <section class="section-anchor fade-in" id="sec-dev">
       <div class="section-label">定制开发</div>
       <h2 class="section-title">AI Skill · CLI 工具 · MCP Server</h2>
       <p class="section-sub">不只是用 AI，我们帮企业把 AI 能力封装成可复用的技能包、命令行工具和数据连接器。</p>
@@ -170,15 +179,15 @@
     <hr class="divider" />
 
     <!-- Training Summary -->
-    <section class="section-anchor fade-in">
+    <section class="section-anchor fade-in" id="sec-training">
       <div class="section-label">培训课程</div>
       <h2 class="section-title">从小白到实战，系统学会用 AI</h2>
       <p class="section-sub">不只讲原理，每堂课都有可以带走的工具和技巧。</p>
       <div class="training-grid" style="grid-template-columns:repeat(2,1fr);">
         <div class="training-card featured">
           <div class="tc-head"><div><span class="tc-badge hot">核心</span><h3>企业 AI 内训</h3></div></div>
-          <p>上门量身定制，帮团队发现 AI 增长机会，掌握 AI 提效工具。</p>
-          <ul><li>✓ 管理层 AI 战略认知</li><li>✓ 业务团队 AI 增长实战</li><li>✓ 全员 AI 工具普及</li></ul>
+          <p>上门量身定制，帮团队掌握所有主流 AI 工具，发现 AI 增长机会。</p>
+          <ul><li>✓ 大模型 / Agent / 音视频 / 数字人</li><li>✓ 业务团队 AI 增长实战</li><li>✓ 全员 AI 工具普及</li></ul>
           <div class="tc-action"><a href="pages/training.html">了解详情 →</a></div>
         </div>
         <div class="training-card">
