@@ -577,6 +577,38 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+.value-card-blue,
+.value-card-green {
+  border-radius: var(--border-radius-xl);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.value-card-blue {
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+  border: 1px solid rgba(37,99,235,0.15);
+}
+.value-card-green {
+  background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+  border: 1px solid rgba(22,163,74,0.15);
+}
+.value-card-blue h3 { color: var(--brand-primary-dark); }
+.value-card-green h3 { color: #15803D; }
+.value-card-blue .value-tag {
+  background: rgba(37,99,235,0.1);
+  color: var(--brand-primary);
+}
+.value-card-green .value-tag {
+  background: rgba(22,163,74,0.1);
+  color: #15803D;
+}
+.value-tag {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: var(--border-radius-full);
+  font-weight: 500;
+  display: inline-block;
+}
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -596,17 +628,22 @@
 
 @media (prefers-color-scheme: dark) {
   .value-card-blue {
-    background: linear-gradient(135deg, rgba(37,99,235,0.15) 0%, rgba(37,99,235,0.08) 100%) !important;
-    border-color: rgba(59,130,246,0.25) !important;
+    background: linear-gradient(135deg, rgba(37,99,235,0.15) 0%, rgba(37,99,235,0.08) 100%);
+    border-color: rgba(59,130,246,0.25);
+  }
+  .value-card-blue h3 { color: #93C5FD; }
+  .value-card-blue .value-tag {
+    background: rgba(37,99,235,0.2);
+    color: #93C5FD;
   }
   .value-card-green {
-    background: linear-gradient(135deg, rgba(22,163,74,0.15) 0%, rgba(22,163,74,0.08) 100%) !important;
-    border-color: rgba(34,197,94,0.25) !important;
+    background: linear-gradient(135deg, rgba(22,163,74,0.15) 0%, rgba(22,163,74,0.08) 100%);
+    border-color: rgba(34,197,94,0.25);
   }
-  .value-card-green h3 { color: #4ADE80 !important; }
+  .value-card-green h3 { color: #4ADE80; }
   .value-card-green .value-tag {
-    background: rgba(22,163,74,0.2) !important;
-    color: #4ADE80 !important;
+    background: rgba(22,163,74,0.2);
+    color: #4ADE80;
   }
 }
 

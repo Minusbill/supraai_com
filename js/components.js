@@ -94,7 +94,7 @@ function renderCTA() {
   return `
   <section class="page-cta fade-in">
     <div class="cta-section">
-      <h2>30 天内让您的企业用上 AI</h2>
+      <h2>让 AI 真正为您的企业赋能</h2>
       <p>先做免费诊断，找到最适合的 AI 落地场景，再决定是否合作。</p>
       <div class="cta-btns">
         <button class="btn-white" onclick="location.href='${base}pages/contact.html'">预约免费诊断</button>
