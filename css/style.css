@@ -159,7 +159,8 @@ section { padding: 4rem 2rem; max-width: var(--max-width); margin: 0 auto; }
 .mcp-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--brand-primary); }
 .mcp-card-icon { width: 42px; height: 42px; border-radius: var(--border-radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 18px; background: var(--color-teal-bg); }
 .mcp-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
-.mcp-card p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 12px; }
+.mcp-card p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.7; max-height: 0; overflow: hidden; opacity: 0; margin: 0; transition: all 0.3s ease; }
+.mcp-card:hover p { max-height: 60px; opacity: 1; margin-top: 8px; }
 .mcp-card ul { padding: 0; }
 .mcp-card li { font-size: 12px; color: var(--color-text-secondary); padding: 3px 0; display: flex; align-items: center; gap: 6px; }
 
@@ -513,6 +514,16 @@ section { padding: 4rem 2rem; max-width: var(--max-width); margin: 0 auto; }
   font-size: 12.5px;
   color: var(--color-text-secondary);
   line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+.industry-card:hover p {
+  max-height: 60px;
+  opacity: 1;
+  margin-top: 6px;
 }
 
 /* === About Content === */
