@@ -4,101 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <!-- SEO Meta -->
   <title>超灵智能 SUPRAAI | 大湾区中小企业 AI 转型一站式服务商</title>
   <meta name="description" content="超灵智能专注于为大湾区中小企业提供 AI 咨询、培训、项目实施、Skill/CLI/MCP 定制开发服务。30 天内让您的企业用上 AI。" />
   <meta name="keywords" content="AI咨询,AI培训,企业AI转型,RAG知识库,智能客服,MCP开发,Skill开发,AI Skill,CLI工具,大湾区,深圳,广州,东莞,佛山,超灵智能,SUPRAAI" />
   <meta name="author" content="超灵智能 SUPRAAI" />
   <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="超灵智能 SUPRAAI | 大湾区中小企业 AI 转型一站式服务商" />
   <meta property="og:description" content="不卖概念，只卖结果——让每一家中小企业都能在 30 天内用上 AI。" />
   <meta property="og:url" content="https://chaolng.ai" />
   <meta property="og:site_name" content="超灵智能 SUPRAAI" />
   <meta property="og:locale" content="zh_CN" />
-
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Canonical -->
+  <link rel="stylesheet" href="css/pages.css" />
   <link rel="canonical" href="https://chaolng.ai" />
 </head>
 <body>
 
-  <!-- ==================== Navigation ==================== -->
-  <nav class="nav" role="navigation" aria-label="主导航">
-    <a href="/" class="logo" aria-label="超灵智能首页">
-      <svg class="logo-icon" viewBox="0 0 32 32" width="36" height="36">
-        <rect width="32" height="32" rx="6" fill="#2563EB"/>
-        <path d="M16 6 L22 12 L16 12 L20 18 L14 18 L18 24 L8 14 L14 14 L10 8 Z" fill="white" opacity="0.95"/>
-      </svg>
-      <span class="logo-text">超灵智能<small>SUPRAAI</small></span>
-    </a>
-    <div class="nav-links" id="navLinks">
-      <div class="nav-dropdown">
-        <a class="nav-dropdown-trigger">服务方案 <span class="nav-arrow">▾</span></a>
-        <div class="nav-dropdown-menu">
-          <a onclick="scrollToSection('services')">服务总览</a>
-          <a onclick="scrollToSection('enterprise')">行业方案</a>
-          <a onclick="scrollToSection('mcp-dev')">定制开发</a>
-          <a onclick="scrollToSection('training')">培训课程</a>
-        </div>
-      </div>
-      <a data-section="cases" onclick="scrollToSection('cases')">案例</a>
-      <a data-section="about" onclick="scrollToSection('about')">关于</a>
-      <a data-section="contact" onclick="scrollToSection('contact')">联系我们</a>
-    </div>
-    <div style="display:flex;align-items:center;gap:12px;">
-      <button class="nav-cta" onclick="scrollToSection('contact')">免费咨询 →</button>
-      <button class="nav-toggle" id="navToggle" aria-label="菜单">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+  <!-- Nav -->
+  <div id="shared-nav"></div>
 
-  <!-- ==================== Main Content ==================== -->
   <main class="main-content">
 
-    <!-- ===== Hero ===== -->
+    <!-- Hero -->
     <header class="hero">
       <div class="badge">大湾区 · AI 转型一站式服务商</div>
       <h1>让每一家中小企业<br/>都能<em>真正用上 AI</em></h1>
       <p>不卖概念，只卖结果。帮您的企业在 30 天内用上 AI，在 90 天内靠 AI 省钱或赚钱。</p>
       <div class="hero-btns">
-        <button class="btn-primary" onclick="scrollToSection('contact')">预约免费诊断</button>
-        <button class="btn-secondary" onclick="scrollToSection('services')">了解服务</button>
+        <button class="btn-primary" onclick="location.href='pages/contact.html'">预约免费诊断</button>
+        <button class="btn-secondary" onclick="location.href='pages/services.html'">了解服务</button>
       </div>
       <div class="stats">
-        <div class="stat-item">
-          <div class="stat-num">500</div>
-          <div class="stat-label">目标服务企业</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">30天</div>
-          <div class="stat-label">快速落地</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">12+</div>
-          <div class="stat-label">覆盖行业</div>
-        </div>
+        <div class="stat-item"><div class="stat-num">500</div><div class="stat-label">目标服务企业</div></div>
+        <div class="stat-item"><div class="stat-num">30天</div><div class="stat-label">快速落地</div></div>
+        <div class="stat-item"><div class="stat-num">12+</div><div class="stat-label">覆盖行业</div></div>
       </div>
     </header>
 
-    <!-- ===== Services ===== -->
-    <section id="services" class="section-anchor fade-in">
+    <!-- Services Summary -->
+    <section class="section-anchor fade-in">
       <div class="section-label">服务模式</div>
       <h2 class="section-title">从诊断到落地，全程陪跑</h2>
       <p class="section-sub">每家企业情况不同，我们不套模板。先了解您的业务，再给最适合的方案。</p>
-
       <div class="service-flow">
         <div class="service-flow-step">
           <div class="flow-num">01</div>
@@ -125,95 +75,43 @@
           <span class="flow-tag">按月顾问</span>
         </div>
       </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ===== Enterprise Solutions (by Industry) ===== -->
-    <section id="enterprise" class="section-anchor fade-in">
-      <div class="section-label">服务行业</div>
-      <h2 class="section-title">深入理解您的行业</h2>
-      <p class="section-sub">我们不做通用方案。每次合作前先深入了解您的业务，再给出最适合的 AI 落地建议。</p>
-
-      <div class="industry-grid">
-        <div class="industry-card">
-          <div class="industry-icon">🛒</div>
-          <h4>电商 / 跨境</h4>
-          <p>选品、客服、翻译全链路 AI 化</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">🏭</div>
-          <h4>制造业</h4>
-          <p>知识库 + 质检 + 工艺问答</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">🏢</div>
-          <h4>企业服务</h4>
-          <p>合同、日报、流程全面 AI 化</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">📊</div>
-          <h4>会计 / 财税</h4>
-          <p>票据、报表、税务一键处理</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">🏥</div>
-          <h4>医疗健康</h4>
-          <p>病历检索 + 问答 + 报告生成</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">⚖️</div>
-          <h4>法律服务</h4>
-          <p>合同审查 + 法规检索 + 文书</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">🎓</div>
-          <h4>教育培训</h4>
-          <p>AI 助教 + 课程生成 + 管理</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">🚢</div>
-          <h4>外贸 / 物流</h4>
-          <p>询盘、报价、多语言自动处理</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">🏠</div>
-          <h4>房地产 / 物业</h4>
-          <p>推荐 + 报修派单 + 智能客服</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">🍽️</div>
-          <h4>餐饮 / 酒店</h4>
-          <p>点评回复 + 库存 + 多语言接待</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">💆</div>
-          <h4>美容 / 健康</h4>
-          <p>客户画像 + 预约 + 营销文案</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-icon">💰</div>
-          <h4>金融 / 保险</h4>
-          <p>风控 + 客户画像 + 合规检索</p>
-        </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="pages/services.html" class="btn-secondary" style="display:inline-block;">了解完整服务方案 →</a>
       </div>
     </section>
 
     <hr class="divider" />
 
-    <!-- ===== Cases ===== -->
-    <section id="cases" class="section-anchor fade-in">
+    <!-- Industries Summary (6 items) -->
+    <section class="section-anchor fade-in">
+      <div class="section-label">服务行业</div>
+      <h2 class="section-title">深入理解您的行业</h2>
+      <p class="section-sub">我们不做通用方案。每次合作前先深入了解您的业务，再给出最适合的 AI 落地建议。</p>
+      <div class="industry-grid">
+        <div class="industry-card"><div class="industry-icon">🛒</div><h4>电商 / 跨境</h4><p>选品、客服、翻译全链路 AI 化</p></div>
+        <div class="industry-card"><div class="industry-icon">🏭</div><h4>制造业</h4><p>知识库 + 质检 + 工艺问答</p></div>
+        <div class="industry-card"><div class="industry-icon">🏢</div><h4>企业服务</h4><p>合同、日报、流程全面 AI 化</p></div>
+        <div class="industry-card"><div class="industry-icon">📊</div><h4>会计 / 财税</h4><p>票据、报表、税务一键处理</p></div>
+        <div class="industry-card"><div class="industry-icon">🏥</div><h4>医疗健康</h4><p>病历检索 + 问答 + 报告生成</p></div>
+        <div class="industry-card"><div class="industry-icon">⚖️</div><h4>法律服务</h4><p>合同审查 + 法规检索 + 文书</p></div>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="pages/industries.html" class="btn-secondary" style="display:inline-block;">查看全部 12+ 行业方案 →</a>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Cases Summary (2 items) -->
+    <section class="section-anchor fade-in">
       <div class="section-label">项目案例</div>
       <h2 class="section-title">真实落地，用结果说话</h2>
       <p class="section-sub">每个项目都从业务诊断开始，找准方向再动手，确保投入有回报。</p>
       <div class="cases-grid">
         <div class="case-card">
           <div class="case-header">
-            <div class="case-icon" style="background: var(--color-blue-bg);">🛒</div>
-            <div class="case-header-text">
-              <h3>跨境电商智能客服</h3>
-              <span class="case-industry">跨境电商 · 深圳</span>
-            </div>
+            <div class="case-icon" style="background:var(--color-blue-bg);">🛒</div>
+            <div class="case-header-text"><h3>跨境电商智能客服</h3><span class="case-industry">跨境电商 · 深圳</span></div>
           </div>
           <p>多语言智能客服系统，接入企业微信与 Shopify，7×24 自动接待，转化率提升明显。</p>
           <div class="case-metrics">
@@ -224,11 +122,8 @@
         </div>
         <div class="case-card">
           <div class="case-header">
-            <div class="case-icon" style="background: var(--color-teal-bg);">🏭</div>
-            <div class="case-header-text">
-              <h3>制造企业 RAG 知识库</h3>
-              <span class="case-industry">制造业 · 东莞</span>
-            </div>
+            <div class="case-icon" style="background:var(--color-teal-bg);">🏭</div>
+            <div class="case-header-text"><h3>制造企业 RAG 知识库</h3><span class="case-industry">制造业 · 东莞</span></div>
           </div>
           <p>386 份产品手册、质检标准向量化，新员工培训时间大幅缩短，产线问题响应提速。</p>
           <div class="case-metrics">
@@ -237,250 +132,76 @@
             <div class="case-metric"><div class="metric-value">70%</div><div class="metric-label">培训提速</div></div>
           </div>
         </div>
-        <div class="case-card">
-          <div class="case-header">
-            <div class="case-icon" style="background: var(--color-purple-bg);">⚖️</div>
-            <div class="case-header-text">
-              <h3>律所合同审查 AI</h3>
-              <span class="case-industry">法律服务 · 广州</span>
-            </div>
-          </div>
-          <p>基于 Claude API 的合同智能审查，自动识别风险条款，律师接单量大幅提升。</p>
-          <div class="case-metrics">
-            <div class="case-metric"><div class="metric-value">+50%</div><div class="metric-label">接单量提升</div></div>
-            <div class="case-metric"><div class="metric-value">5分钟</div><div class="metric-label">单份审查</div></div>
-            <div class="case-metric"><div class="metric-value">40%</div><div class="metric-label">成本降低</div></div>
-          </div>
-        </div>
-        <div class="case-card">
-          <div class="case-header">
-            <div class="case-icon" style="background: var(--color-amber-bg);">📊</div>
-            <div class="case-header-text">
-              <h3>贸易公司 AI 工作流</h3>
-              <span class="case-industry">国际贸易 · 佛山</span>
-            </div>
-          </div>
-          <p>日报汇总、询盘回复、报价生成等流程 AI 化，同等人力下业务处理量翻倍。</p>
-          <div class="case-metrics">
-            <div class="case-metric"><div class="metric-value">2倍</div><div class="metric-label">业务处理量</div></div>
-            <div class="case-metric"><div class="metric-value">3倍</div><div class="metric-label">报价速度</div></div>
-            <div class="case-metric"><div class="metric-value">2小时</div><div class="metric-label">每天节省</div></div>
-          </div>
-        </div>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="pages/cases.html" class="btn-secondary" style="display:inline-block;">查看更多案例 →</a>
       </div>
     </section>
 
     <hr class="divider" />
 
-    <!-- ===== AI Skill / CLI / MCP Development ===== -->
-    <section id="mcp-dev" class="section-anchor fade-in">
+    <!-- MCP Dev Summary -->
+    <section class="section-anchor fade-in">
       <div class="section-label">定制开发</div>
       <h2 class="section-title">AI Skill · CLI 工具 · MCP Server</h2>
       <p class="section-sub">不只是用 AI，我们帮企业把 AI 能力封装成可复用的技能包、命令行工具和数据连接器。</p>
-
-      <div class="mcp-hero" style="grid-template-columns: 1fr;">
-        <div class="mcp-hero-content" style="text-align: center; max-width: 700px; margin: 0 auto;">
-          <h3>您提需求，我们交付</h3>
-          <p>从需求沟通到上线交付，全程负责。无论是行业专属 AI 技能、自动化命令行工具，还是连接内部系统的数据桥梁——我们都能做。</p>
-          <div class="mcp-tech-tags" style="justify-content: center;">
-            <span class="mcp-tech-tag">AI Skill</span>
-            <span class="mcp-tech-tag">CLI 工具</span>
-            <span class="mcp-tech-tag">MCP Server</span>
-            <span class="mcp-tech-tag">Agent 开发</span>
-            <span class="mcp-tech-tag">私有化部署</span>
-          </div>
-        </div>
-      </div>
-
       <div class="mcp-cards">
         <div class="mcp-card">
-          <div class="mcp-card-icon" style="background: var(--color-amber-bg);">🧠</div>
+          <div class="mcp-card-icon" style="background:var(--color-amber-bg);">🧠</div>
           <h4>AI Skill 定制</h4>
-          <p>把行业经验封装成 AI 可调用的技能包。</p>
-          <ul>
-            <li>合同审查 / 财务分析 / 客服话术</li>
-            <li>即插即用，团队共享</li>
-            <li>持续迭代，越用越好</li>
-          </ul>
+          <p>把行业经验封装成 AI 可调用的技能包，即插即用。</p>
         </div>
         <div class="mcp-card">
-          <div class="mcp-card-icon" style="background: var(--color-blue-bg);">⌨️</div>
+          <div class="mcp-card-icon" style="background:var(--color-blue-bg);">⌨️</div>
           <h4>CLI 工具开发</h4>
-          <p>一行命令完成重复性工作。</p>
-          <ul>
-            <li>批量数据处理 / 报表生成</li>
-            <li>自动化运维脚本</li>
-            <li>对接第三方平台 API</li>
-          </ul>
+          <p>一行命令完成重复性工作，批量处理、自动化运维。</p>
         </div>
         <div class="mcp-card">
           <div class="mcp-card-icon">🔌</div>
           <h4>MCP Server 定制</h4>
-          <p>让 AI 直接读写你的业务系统。</p>
-          <ul>
-            <li>连接 ERP / CRM / OA</li>
-            <li>兼容 Claude / Cursor 等主流 AI</li>
-            <li>私有化部署，数据不出企业</li>
-          </ul>
+          <p>让 AI 直接读写你的业务系统，私有化部署。</p>
         </div>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="pages/mcp-dev.html" class="btn-secondary" style="display:inline-block;">了解定制开发服务 →</a>
       </div>
     </section>
 
     <hr class="divider" />
 
-    <!-- ===== Training ===== -->
-    <section id="training" class="section-anchor fade-in">
+    <!-- Training Summary -->
+    <section class="section-anchor fade-in">
       <div class="section-label">培训课程</div>
       <h2 class="section-title">从小白到实战，系统学会用 AI</h2>
       <p class="section-sub">不只讲原理，每堂课都有可以带走的工具和技巧。</p>
-      <div class="training-grid">
-        <div class="training-card">
-          <div class="tc-head"><div><span class="tc-badge">入门</span><h3>AI 工具实操营</h3></div></div>
-          <p>2 天线下集训，手把手教会用主流 AI 工具处理真实工作场景。</p>
-          <ul><li>✓ 提示词工程基础</li><li>✓ AI 写作、分析实战</li><li>✓ 搭建 AI 工作流</li></ul>
-          <div class="tc-action"><a onclick="scrollToSection('contact')">了解详情 →</a></div>
-        </div>
+      <div class="training-grid" style="grid-template-columns:repeat(2,1fr);">
         <div class="training-card featured">
           <div class="tc-head"><div><span class="tc-badge hot">热门</span><h3>AI 创业者加速营</h3></div></div>
           <p>6 周线上课程，专为想用 AI 转型的创业者设计。</p>
           <ul><li>✓ AI 选品/营销/客服实战</li><li>✓ 用 AI 搭建个人 IP</li><li>✓ 每周直播答疑</li></ul>
-          <div class="tc-action"><a onclick="scrollToSection('contact')">了解详情 →</a></div>
+          <div class="tc-action"><a href="pages/training.html">了解详情 →</a></div>
         </div>
         <div class="training-card">
-          <div class="tc-head"><div><span class="tc-badge">免费</span><h3>AI 趋势公开讲座</h3></div></div>
-          <p>每月 1-2 场线下沙龙，了解最新 AI 动态和真实案例。</p>
-          <ul><li>✓ 行业最新进展</li><li>✓ 现场工具演示</li><li>✓ 1v1 咨询机会</li></ul>
-          <div class="tc-action"><a onclick="scrollToSection('contact')">免费报名 →</a></div>
+          <div class="tc-head"><div><span class="tc-badge">入门</span><h3>AI 工具实操营</h3></div></div>
+          <p>2 天线下集训，手把手教会用主流 AI 工具处理真实工作场景。</p>
+          <ul><li>✓ 提示词工程基础</li><li>✓ AI 写作、分析实战</li><li>✓ 搭建 AI 工作流</li></ul>
+          <div class="tc-action"><a href="pages/training.html">了解详情 →</a></div>
         </div>
-        <div class="training-card">
-          <div class="tc-head"><div><span class="tc-badge">定制</span><h3>企业 AI 内训</h3></div></div>
-          <p>上门量身定制培训，从基础认知到行业实操。</p>
-          <ul><li>✓ 根据行业定制案例</li><li>✓ 学完即用</li><li>✓ 含后续工具支持</li></ul>
-          <div class="tc-action"><a onclick="scrollToSection('contact')">咨询定制 →</a></div>
-        </div>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="pages/training.html" class="btn-secondary" style="display:inline-block;">查看全部课程 →</a>
       </div>
     </section>
 
-    <hr class="divider" />
-
-    <!-- ===== About ===== -->
-    <section id="about" class="section-anchor fade-in">
-      <div class="section-label">关于我们</div>
-      <h2 class="section-title">资深团队，专注大湾区</h2>
-      <p class="section-sub">团队成员来自多家互联网企业的高级技术与管理岗位，拥有丰富的一线 IT 实战经验，致力于帮助大湾区各行业企业完成 AI 转型升级。</p>
-
-      <div class="about-content">
-        <div class="about-text">
-          <p><strong>超灵智能（SUPRAAI）</strong>核心团队成员曾在多家知名互联网公司担任高级技术和管理职务，深耕<strong>AI 人工智能、云计算、企业数字化转型</strong>等前沿领域多年，积累了从技术架构到商业落地的全链路实战经验。</p>
-          <p>我们深知中小企业在 AI 转型中的痛点和需求。凭借跨行业的技术视野和扎实的工程能力，我们为大湾区电商、制造、外贸、服务业等<strong>多个行业的企业</strong>提供从诊断咨询到系统交付的一站式 AI 服务，真正帮助企业用 AI <strong>降本增效、开拓营收</strong>。</p>
-          <div class="about-strengths">
-            <span class="about-strength-tag">🔧 前沿工具实战</span>
-            <span class="about-strength-tag">💻 全栈交付能力</span>
-            <span class="about-strength-tag">🏭 多行业经验</span>
-            <span class="about-strength-tag">🔒 私有化部署</span>
-            <span class="about-strength-tag">🎯 结果导向</span>
-          </div>
-        </div>
-        <div class="about-stats">
-          <div class="about-stat-item">
-            <div class="about-stat-num">10+</div>
-            <div class="about-stat-label">年互联网从业经验</div>
-          </div>
-          <div class="about-stat-item">
-            <div class="about-stat-num">12+</div>
-            <div class="about-stat-label">覆盖行业</div>
-          </div>
-          <div class="about-stat-item">
-            <div class="about-stat-num">50+</div>
-            <div class="about-stat-label">已交付项目</div>
-          </div>
-          <div class="about-stat-item">
-            <div class="about-stat-num">100%</div>
-            <div class="about-stat-label">全栈交付能力</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CTA ===== -->
-    <section class="fade-in">
-      <div class="cta-section">
-        <h2>30 天内让您的企业用上 AI</h2>
-        <p>先做免费诊断，找到最适合的 AI 落地场景，再决定是否合作。</p>
-        <div class="cta-btns">
-          <button class="btn-white" onclick="scrollToSection('contact')">预约免费诊断</button>
-          <button class="btn-outline-white" onclick="scrollToSection('cases')">查看案例</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Contact ===== -->
-    <section id="contact" class="section-anchor fade-in">
-      <div class="section-label">联系我们</div>
-      <h2 class="section-title">预约咨询 · 服务大湾区</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>欢迎联系我们</h3>
-          <p>无论您是企业主、创业者，还是对 AI 感兴趣的个人，都欢迎来聊聊。第一次沟通免费。</p>
-          <div class="contact-item">
-            <div class="ci-icon">📍</div>
-            <div class="ci-text"><strong>地址</strong><br/>广东 · 粤港澳大湾区（深圳、广州、东莞、佛山全覆盖）</div>
-          </div>
-          <div class="contact-item">
-            <div class="ci-icon">📱</div>
-            <div class="ci-text"><strong>微信 / 电话</strong><br/>添加微信，备注"AI咨询"</div>
-          </div>
-          <div class="contact-item">
-            <div class="ci-icon">📺</div>
-            <div class="ci-text"><strong>B 站 / 公众号</strong><br/>搜索"超灵智能"关注获取最新资讯</div>
-          </div>
-          <div class="contact-item">
-            <div class="ci-icon">📧</div>
-            <div class="ci-text"><strong>邮箱</strong><br/>hello@chaolng.ai</div>
-          </div>
-        </div>
-        <form class="contact-form" id="contactForm">
-          <h3>留下您的信息</h3>
-          <div class="form-group">
-            <label for="formName">您的姓名 *</label>
-            <input type="text" id="formName" placeholder="王总 / 李总..." required />
-          </div>
-          <div class="form-group">
-            <label for="formCompany">公司名称</label>
-            <input type="text" id="formCompany" placeholder="公司名称" />
-          </div>
-          <div class="form-group">
-            <label for="formContact">联系方式（微信/手机）*</label>
-            <input type="text" id="formContact" placeholder="方便联系您的方式" required />
-          </div>
-          <div class="form-group">
-            <label for="formService">您最感兴趣的服务</label>
-            <select id="formService">
-              <option value="AI 诊断咨询">AI 诊断咨询</option>
-              <option value="企业 AI 项目实施">企业 AI 项目实施</option>
-              <option value="MCP/Skill 定制开发">MCP / Skill 定制开发</option>
-              <option value="个人 AI 培训">个人 AI 培训</option>
-              <option value="Token 代理服务">Token 代理服务</option>
-              <option value="其他">其他</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="formMessage">简单说说您的需求（选填）</label>
-            <textarea id="formMessage" placeholder="我们公司做电商，想用 AI 提升客服效率..."></textarea>
-          </div>
-          <button type="submit" class="submit-btn">提交信息，等待联系 →</button>
-        </form>
-      </div>
-    </section>
+    <!-- CTA -->
+    <div id="shared-cta"></div>
 
   </main>
 
-  <!-- ==================== Footer ==================== -->
-  <footer class="footer">
-    <p>© 2026 超灵智能 SUPRAAI · 粤港澳大湾区 AI 转型一站式服务商</p>
-  </footer>
+  <!-- Footer -->
+  <div id="shared-footer"></div>
 
-  <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
 </body>
 </html>

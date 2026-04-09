@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>项目案例 | 超灵智能 SUPRAAI</title>
+  <meta name="description" content="超灵智能真实 AI 落地案例：跨境电商智能客服、制造业知识库、律所合同审查、贸易公司工作流自动化。" />
+  <meta name="keywords" content="AI案例,智能客服案例,RAG知识库案例,AI转型案例,超灵智能" />
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+</head>
+<body>
+
+  <div id="shared-nav"></div>
+
+  <main class="main-content">
+
+    <div class="page-hero">
+      <div class="badge">项目案例</div>
+      <h1>真实落地，用结果说话</h1>
+      <p>每个项目都从业务诊断开始，找准方向再动手，确保投入有回报。以下是我们的部分案例。</p>
+    </div>
+
+    <section class="page-section fade-in">
+
+      <!-- 筛选标签 -->
+      <div class="filter-tags">
+        <span class="filter-tag active" onclick="filterCases('all', this)">全部</span>
+        <span class="filter-tag" onclick="filterCases('ecommerce', this)">电商</span>
+        <span class="filter-tag" onclick="filterCases('manufacturing', this)">制造业</span>
+        <span class="filter-tag" onclick="filterCases('legal', this)">法律</span>
+        <span class="filter-tag" onclick="filterCases('trade', this)">外贸</span>
+        <span class="filter-tag" onclick="filterCases('finance', this)">财税</span>
+        <span class="filter-tag" onclick="filterCases('service', this)">企业服务</span>
+      </div>
+
+      <!-- 案例1：跨境电商 -->
+      <div class="case-detail" data-category="ecommerce">
+        <div class="case-detail-header">
+          <div class="case-icon" style="background:var(--color-blue-bg);">🛒</div>
+          <div>
+            <h3>跨境电商智能客服系统</h3>
+            <span class="case-industry">跨境电商 · 深圳 · 2025</span>
+          </div>
+        </div>
+        <div class="case-detail-body">
+          <div>
+            <h4>客户背景</h4>
+            <p>深圳某跨境电商公司，主营 3C 配件，Shopify + 亚马逊双平台运营，日均咨询量 500+，客服团队 8 人，覆盖英语、西班牙语、日语三个市场。</p>
+          </div>
+          <div>
+            <h4>面临挑战</h4>
+            <p>多语言客服成本高，夜间无人值守导致大量询盘流失。客服回复质量参差不齐，退货率居高不下。</p>
+          </div>
+          <div>
+            <h4>解决方案</h4>
+            <p>基于 Claude API 搭建多语言智能客服，接入企业微信和 Shopify 后台。支持自动回复常见问题、智能推荐产品、自动生成售后方案。复杂问题自动转人工。</p>
+          </div>
+          <div>
+            <h4>实施过程</h4>
+            <p>第 1 周：业务调研 + 话术梳理；第 2-3 周：系统开发 + 多语言适配；第 4 周：灰度上线 + 优化调试。总计 4 周交付。</p>
+          </div>
+        </div>
+        <div class="case-metrics" style="margin-top:1.25rem;">
+          <div class="case-metric"><div class="metric-value">+35%</div><div class="metric-label">询单转化率</div></div>
+          <div class="case-metric"><div class="metric-value">10秒</div><div class="metric-label">平均响应</div></div>
+          <div class="case-metric"><div class="metric-value">60%</div><div class="metric-label">人工减少</div></div>
+          <div class="case-metric"><div class="metric-value">4周</div><div class="metric-label">交付周期</div></div>
+        </div>
+      </div>
+
+      <!-- 案例2：制造业 -->
+      <div class="case-detail" data-category="manufacturing">
+        <div class="case-detail-header">
+          <div class="case-icon" style="background:var(--color-teal-bg);">🏭</div>
+          <div>
+            <h3>制造企业 RAG 知识库</h3>
+            <span class="case-industry">制造业 · 东莞 · 2025</span>
+          </div>
+        </div>
+        <div class="case-detail-body">
+          <div>
+            <h4>客户背景</h4>
+            <p>东莞某精密模具制造企业，员工 200+，积累了 386 份产品手册、质检标准、工艺文档，分散在不同部门的电脑和文件柜中。</p>
+          </div>
+          <div>
+            <h4>面临挑战</h4>
+            <p>新员工上手慢，遇到问题只能找老师傅。老师傅退休后经验断层严重。产线问题排查平均需要 30 分钟翻阅文档。</p>
+          </div>
+          <div>
+            <h4>解决方案</h4>
+            <p>将全部文档向量化，搭建 RAG 知识库 + 工艺问答机器人。支持自然语言提问，秒级返回精准答案并标注来源文档。部署在企业内网，数据不出厂。</p>
+          </div>
+          <div>
+            <h4>实施过程</h4>
+            <p>第 1 周：文档收集 + 清洗；第 2-4 周：向量化 + 系统开发；第 5-6 周：测试 + 培训 + 上线。总计 6 周交付。</p>
+          </div>
+        </div>
+        <div class="case-metrics" style="margin-top:1.25rem;">
+          <div class="case-metric"><div class="metric-value">3倍</div><div class="metric-label">问题响应提速</div></div>
+          <div class="case-metric"><div class="metric-value">386份</div><div class="metric-label">文档入库</div></div>
+          <div class="case-metric"><div class="metric-value">70%</div><div class="metric-label">培训提速</div></div>
+          <div class="case-metric"><div class="metric-value">6周</div><div class="metric-label">交付周期</div></div>
+        </div>
+      </div>
+
+      <!-- 案例3：律所 -->
+      <div class="case-detail" data-category="legal">
+        <div class="case-detail-header">
+          <div class="case-icon" style="background:var(--color-purple-bg);">⚖️</div>
+          <div>
+            <h3>律所合同审查 AI</h3>
+            <span class="case-industry">法律服务 · 广州 · 2025</span>
+          </div>
+        </div>
+        <div class="case-detail-body">
+          <div>
+            <h4>客户背景</h4>
+            <p>广州某中型律所，15 名律师，主营企业法律顾问和合同审查业务。每位律师每天平均审查 3-5 份合同，每份耗时 1-2 小时。</p>
+          </div>
+          <div>
+            <h4>面临挑战</h4>
+            <p>合同审查占用大量时间，律师无法专注高价值业务。人工审查容易遗漏风险条款，尤其是非标准合同。</p>
+          </div>
+          <div>
+            <h4>解决方案</h4>
+            <p>基于 Claude API 开发合同智能审查系统，自动识别风险条款、缺失条款、不合理条款，生成审查报告。支持自定义审查规则，适配不同类型合同。</p>
+          </div>
+          <div>
+            <h4>实施过程</h4>
+            <p>第 1 周：需求调研 + 审查规则梳理；第 2-3 周：系统开发；第 4 周：律师试用 + 规则优化。总计 4 周交付。</p>
+          </div>
+        </div>
+        <div class="case-metrics" style="margin-top:1.25rem;">
+          <div class="case-metric"><div class="metric-value">+50%</div><div class="metric-label">接单量提升</div></div>
+          <div class="case-metric"><div class="metric-value">5分钟</div><div class="metric-label">单份审查</div></div>
+          <div class="case-metric"><div class="metric-value">40%</div><div class="metric-label">成本降低</div></div>
+          <div class="case-metric"><div class="metric-value">4周</div><div class="metric-label">交付周期</div></div>
+        </div>
+      </div>
+
+      <!-- 案例4：贸易公司 -->
+      <div class="case-detail" data-category="trade">
+        <div class="case-detail-header">
+          <div class="case-icon" style="background:var(--color-amber-bg);">📊</div>
+          <div>
+            <h3>贸易公司 AI 工作流</h3>
+            <span class="case-industry">国际贸易 · 佛山 · 2025</span>
+          </div>
+        </div>
+        <div class="case-detail-body">
+          <div>
+            <h4>客户背景</h4>
+            <p>佛山某建材贸易公司，主营出口业务，团队 30 人。每天需要处理大量询盘邮件、报价单、日报汇总等重复性工作。</p>
+          </div>
+          <div>
+            <h4>面临挑战</h4>
+            <p>业务员每天花 2-3 小时在邮件回复和报价上，日报汇总需要主管手动整理。业务增长但不想增加人手。</p>
+          </div>
+          <div>
+            <h4>解决方案</h4>
+            <p>搭建 AI 工作流系统：自动解析询盘邮件 → AI 生成报价单 → 自动汇总日报。接入企业微信，业务员用自然语言就能触发流程。</p>
+          </div>
+          <div>
+            <h4>实施过程</h4>
+            <p>第 1 周：流程梳理 + 模板设计；第 2-4 周：工作流开发 + 对接；第 5 周：试运行 + 优化。总计 5 周交付。</p>
+          </div>
+        </div>
+        <div class="case-metrics" style="margin-top:1.25rem;">
+          <div class="case-metric"><div class="metric-value">2倍</div><div class="metric-label">业务处理量</div></div>
+          <div class="case-metric"><div class="metric-value">3倍</div><div class="metric-label">报价速度</div></div>
+          <div class="case-metric"><div class="metric-value">2小时</div><div class="metric-label">每天节省</div></div>
+          <div class="case-metric"><div class="metric-value">5周</div><div class="metric-label">交付周期</div></div>
+        </div>
+      </div>
+
+      <!-- 案例5：会计事务所 -->
+      <div class="case-detail" data-category="finance">
+        <div class="case-detail-header">
+          <div class="case-icon" style="background:var(--color-teal-bg);">📊</div>
+          <div>
+            <h3>会计事务所票据自动化</h3>
+            <span class="case-industry">财税服务 · 东莞 · 2026</span>
+          </div>
+        </div>
+        <div class="case-detail-body">
+          <div>
+            <h4>客户背景</h4>
+            <p>东莞某会计事务所，服务 200+ 家中小企业客户，每月处理上万张票据。会计团队 12 人，旺季经常加班到深夜。</p>
+          </div>
+          <div>
+            <h4>面临挑战</h4>
+            <p>票据录入全靠手工，效率低且容易出错。税务政策更新频繁，会计需要花大量时间学习新规。</p>
+          </div>
+          <div>
+            <h4>解决方案</h4>
+            <p>OCR + AI 票据自动识别录入系统，支持发票、收据、银行回单等多种票据。搭建税务政策知识库，AI 实时解答政策问题。</p>
+          </div>
+          <div>
+            <h4>实施过程</h4>
+            <p>第 1-2 周：票据类型梳理 + 样本收集；第 3-5 周：OCR 模型训练 + 系统开发；第 6 周：上线 + 培训。总计 6 周交付。</p>
+          </div>
+        </div>
+        <div class="case-metrics" style="margin-top:1.25rem;">
+          <div class="case-metric"><div class="metric-value">5倍</div><div class="metric-label">处理效率</div></div>
+          <div class="case-metric"><div class="metric-value">95%</div><div class="metric-label">错误减少</div></div>
+          <div class="case-metric"><div class="metric-value">零加班</div><div class="metric-label">旺季表现</div></div>
+          <div class="case-metric"><div class="metric-value">6周</div><div class="metric-label">交付周期</div></div>
+        </div>
+      </div>
+
+      <!-- 案例6：企业服务 -->
+      <div class="case-detail" data-category="service">
+        <div class="case-detail-header">
+          <div class="case-icon" style="background:var(--color-blue-bg);">🏢</div>
+          <div>
+            <h3>企业内部 AI 办公助手</h3>
+            <span class="case-industry">企业服务 · 广州 · 2026</span>
+          </div>
+        </div>
+        <div class="case-detail-body">
+          <div>
+            <h4>客户背景</h4>
+            <p>广州某科技公司，员工 80 人，每天产生大量日报、周报、会议纪要、项目文档。管理层需要花大量时间汇总信息。</p>
+          </div>
+          <div>
+            <h4>面临挑战</h4>
+            <p>日报格式不统一，汇总耗时。会议纪要经常遗漏要点。项目文档分散，新人上手慢。</p>
+          </div>
+          <div>
+            <h4>解决方案</h4>
+            <p>开发企业 AI 办公助手：自动汇总日报生成管理看板、会议录音转纪要、项目知识库智能问答。通过企业微信 Bot 触发。</p>
+          </div>
+          <div>
+            <h4>实施过程</h4>
+            <p>第 1 周：需求调研；第 2-4 周：系统开发 + 企微对接；第 5 周：试运行 + 优化。总计 5 周交付。</p>
+          </div>
+        </div>
+        <div class="case-metrics" style="margin-top:1.25rem;">
+          <div class="case-metric"><div class="metric-value">80%</div><div class="metric-label">文书工作减少</div></div>
+          <div class="case-metric"><div class="metric-value">1.5h</div><div class="metric-label">每人每天节省</div></div>
+          <div class="case-metric"><div class="metric-value">100%</div><div class="metric-label">纪要覆盖率</div></div>
+          <div class="case-metric"><div class="metric-value">5周</div><div class="metric-label">交付周期</div></div>
+        </div>
+      </div>
+
+    </section>
+
+    <div id="shared-cta"></div>
+  </main>
+
+  <div id="shared-footer"></div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    function filterCases(category, el) {
+      document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      document.querySelectorAll('.case-detail').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
