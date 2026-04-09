@@ -616,72 +616,40 @@ section { padding: 4rem 2rem; max-width: var(--max-width); margin: 0 auto; }
   z-index: 90;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
+  background: var(--color-background-primary);
+  border: 1px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 8px 0;
+  box-shadow: var(--shadow-md);
 }
 .side-nav.visible {
   opacity: 1;
   pointer-events: auto;
 }
 .side-nav-item {
-  font-size: 12px;
-  color: var(--color-text-tertiary);
-  padding: 6px 12px;
-  border-left: 2px solid var(--color-border-tertiary);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  padding: 8px 18px 8px 16px;
+  border-left: 3px solid transparent;
   transition: all var(--transition-fast);
   white-space: nowrap;
   line-height: 1.4;
+  letter-spacing: 0.02em;
 }
 .side-nav-item:hover {
   color: var(--color-text-primary);
-  border-left-color: var(--color-text-secondary);
-}
-.side-nav-item.active {
-  color: var(--brand-primary);
-  border-left-color: var(--brand-primary);
-  font-weight: 600;
-}
-@media (max-width: 1200px) {
-  .side-nav { display: none; }
-}
-
-/* === Side Nav (左侧悬浮导航) === */
-.side-nav {
-  position: fixed;
-  left: 1.25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 90;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-.side-nav.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-.side-nav-item {
-  font-size: 12px;
-  color: var(--color-text-tertiary);
-  padding: 6px 12px;
-  border-left: 2px solid transparent;
-  transition: all var(--transition-fast);
-  white-space: nowrap;
-  text-decoration: none;
-}
-.side-nav-item:hover {
-  color: var(--color-text-primary);
+  background: var(--color-background-secondary);
   border-left-color: var(--color-border-secondary);
 }
 .side-nav-item.active {
   color: var(--brand-primary);
   border-left-color: var(--brand-primary);
   font-weight: 600;
+  background: var(--color-teal-bg);
 }
 @media (max-width: 1200px) {
   .side-nav { display: none; }
