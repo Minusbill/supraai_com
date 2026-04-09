@@ -570,3 +570,47 @@
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+/* === Value Props (开源节流) === */
+.value-props-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.testimonial-card {
+  background: var(--color-background-primary);
+  border: 1px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  transition: all var(--transition-base);
+}
+.testimonial-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .value-card-blue {
+    background: linear-gradient(135deg, rgba(37,99,235,0.15) 0%, rgba(37,99,235,0.08) 100%) !important;
+    border-color: rgba(59,130,246,0.25) !important;
+  }
+  .value-card-green {
+    background: linear-gradient(135deg, rgba(22,163,74,0.15) 0%, rgba(22,163,74,0.08) 100%) !important;
+    border-color: rgba(34,197,94,0.25) !important;
+  }
+  .value-card-green h3 { color: #4ADE80 !important; }
+  .value-card-green .value-tag {
+    background: rgba(22,163,74,0.2) !important;
+    color: #4ADE80 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .value-props-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
